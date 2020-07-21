@@ -517,6 +517,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canMove: 1
+  canChange: 1
   water: {fileID: 1264075267}
   fire: {fileID: 2100428855}
   earth: {fileID: 1896280715}
@@ -1702,7 +1703,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2100428856
 Transform:
   m_ObjectHideFlags: 0
