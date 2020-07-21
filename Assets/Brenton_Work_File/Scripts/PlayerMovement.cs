@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public bool canMove = true;
+    public bool canChange = true;
     private float nowTime = 0.0f;
     public static int score = 0;
 
@@ -18,19 +19,21 @@ public class PlayerMovement : MonoBehaviour
     public GameObject earth;
     public GameObject wind;
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.tag=="water"|| collision.gameObject.tag == "fire" || collision.gameObject.tag == "earth" || collision.gameObject.tag == "wind" )
+        if (other.gameObject.tag == "water" || other.gameObject.tag == "fire" || other.gameObject.tag == "earth" || other.gameObject.tag == "wind")
         {
-            canMove = false;
+            canChange = false;
         }
+
+
     }
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "end")
         {
-            canMove = true;
+            canChange = true;
         }
     }
 
@@ -49,14 +52,14 @@ public class PlayerMovement : MonoBehaviour
 
         pos = gameObject.transform.position;
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow)&&pos.x>=-1.9 &&canMove)
+        if (Input.GetKeyDown(KeyCode.LeftArrow)&&pos.x>=-1 &&canMove && canChange)
         {
        
             target =  new Vector3(pos.x - 1, 1, pos.z);
             canMove = false;
 
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && pos.x <= 1.9&& canMove)
+        if (Input.GetKeyDown(KeyCode.RightArrow) && pos.x <=1 && canMove && canChange)
         {
             target = new Vector3(pos.x + 1, 1, pos.z);
             canMove = false;
@@ -64,12 +67,12 @@ public class PlayerMovement : MonoBehaviour
 
         
 
-        gameObject.transform.position = Vector3.Lerp(pos, target, (20+(score/10)) * Time.deltaTime);
+        gameObject.transform.position = Vector3.Lerp(pos, target, (25+(score/10)) * Time.deltaTime);
         gameObject.transform.position = new Vector3(gameObject.transform.position.x, 1, gameObject.transform.position.z);
 
         float dist = Mathf.Abs(gameObject.transform.position.x - target.x);
 
-        Debug.Log(dist);
+        
         if (dist<0.1)
         {
             gameObject.transform.position = new Vector3(target.x, 1 , target.z);

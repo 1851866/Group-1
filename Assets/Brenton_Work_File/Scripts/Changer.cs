@@ -45,6 +45,8 @@ public class Changer : MonoBehaviour
 
     private void elementChange()
     {
+
         element = Random.Range(1, 5);
+        Debug.Log(element);
     }
 }
