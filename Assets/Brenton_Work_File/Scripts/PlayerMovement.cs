@@ -9,6 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public bool canChange = true;
     private float nowTime = 0.0f;
     public static int score = 0;
+    public static int currentElement;
 
     private Vector3 target;
     private Vector3 pos;
@@ -39,7 +40,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
+    
 
     }
 
@@ -50,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
         score = (int)(nowTime);
 
 
+    
         pos = gameObject.transform.position;
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)&&pos.x>=-1 &&canMove && canChange)
@@ -84,24 +86,28 @@ public class PlayerMovement : MonoBehaviour
         switch (gameObject.tag)
         {
             case "water":
+                currentElement = 0;
                 water.SetActive(true);
                 fire.SetActive(false);
                 earth.SetActive(false);
                 wind.SetActive(false);
                 break;
             case "fire":
+                currentElement = 1;
                 water.SetActive(false);
                 fire.SetActive(true);
                 earth.SetActive(false);
                 wind.SetActive(false);
                 break;
             case "earth":
+                currentElement = 2;
                 water.SetActive(false);
                 fire.SetActive(false);
                 earth.SetActive(true);
                 wind.SetActive(false);
                 break;
             case "wind":
+                currentElement = 3;
                 water.SetActive(false);
                 fire.SetActive(false);
                 earth.SetActive(false);

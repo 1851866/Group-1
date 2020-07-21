@@ -41,8 +41,7 @@ public class EnemyMovement : MonoBehaviour
     void Update()
     {
         //Debug.Log(PlayerMovement.score);
-        speed = 2f;
-        transform.Translate(0, 0, -1f * speed * Time.deltaTime);
+
         
     }
 }

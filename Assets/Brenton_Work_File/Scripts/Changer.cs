@@ -5,14 +5,17 @@ using UnityEngine;
 public class Changer : MonoBehaviour
 {
 
-    private float speed;
     int element; //Water =1 , Fire = 2, Earth = 3, Wind = 4
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name=="Player")
         {
+
             elementChange();
+            
+
+
             switch (element)
             {
                 case 1: other.tag = "water";
@@ -38,15 +41,20 @@ public class Changer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = 2f;
-        transform.Translate(0, 0, -1f * speed * Time.deltaTime);
+
         
     }
 
     private void elementChange()
     {
+        int newElement;
+
+        //do
+        //{
+        //    newElement = 
+        //} while (newElement==element);
 
         element = Random.Range(1, 5);
-        Debug.Log(element);
+
     }
 }
