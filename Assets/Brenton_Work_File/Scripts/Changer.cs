@@ -12,7 +12,7 @@ public class Changer : MonoBehaviour
         if (other.gameObject.name=="Player")
         {
 
-            element = elementChange(element);
+            elementChange();
             
 
 
@@ -45,17 +45,20 @@ public class Changer : MonoBehaviour
         
     }
 
-    private int elementChange(int oldElement)
+    private void elementChange()
     {
+
+
+
 
         int newElement;
 
         do
         {
             newElement = Random.Range(1, 5);
-        } while (oldElement==element);
+        } while (newElement==element);
 
-        return newElement;
+        element = newElement;
 
     }
 }
