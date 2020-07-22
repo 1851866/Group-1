@@ -12,7 +12,7 @@ public class Changer : MonoBehaviour
         if (other.gameObject.name=="Player")
         {
 
-            elementChange();
+            element = elementChange(element);
             
 
 
@@ -35,7 +35,7 @@ public class Changer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        element = 1;
+        element = 2;
     }
 
     // Update is called once per frame
@@ -45,20 +45,17 @@ public class Changer : MonoBehaviour
         
     }
 
-    private void elementChange()
+    private int elementChange(int oldElement)
     {
-
-
-
 
         int newElement;
 
         do
         {
             newElement = Random.Range(1, 5);
-        } while (newElement==element);
+        } while (oldElement==element);
 
-        element = newElement;
+        return newElement;
 
     }
 }
