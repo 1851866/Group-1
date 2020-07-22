@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 4775956641673181215}
   - component: {fileID: 4775956641673181212}
   - component: {fileID: 1187454087}
+  - component: {fileID: 8527750413904611636}
   m_Layer: 0
   m_Name: Earth
   m_TagString: earth
@@ -179,5 +180,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f9cfd5c8da5b2b4f8d9b1bf36f27aca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8527750413904611636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4775956641673181210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc22a15e7f2869f4aba342359f236abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
