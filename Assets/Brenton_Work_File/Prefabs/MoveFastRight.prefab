@@ -15,9 +15,9 @@ GameObject:
   - component: {fileID: 6418087373288187748}
   - component: {fileID: 6418087373288187747}
   - component: {fileID: 1508462649}
-  - component: {fileID: 4268839037564196506}
+  - component: {fileID: 3451024846432730854}
   m_Layer: 0
-  m_Name: MoveFast
+  m_Name: MoveFastRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6418087373288187746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 2, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6418087373865545972}
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f9cfd5c8da5b2b4f8d9b1bf36f27aca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4268839037564196506
+--- !u!114 &3451024846432730854
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,10 +148,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6418087373288187746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 819580dfca2a6e741807b8467812c79d, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e64542ce176c2645b18077f2a6f3239, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moving: 0
 --- !u!1 &6418087373865545971
 GameObject:
   m_ObjectHideFlags: 0
