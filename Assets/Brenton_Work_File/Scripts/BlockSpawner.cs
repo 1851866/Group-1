@@ -28,7 +28,7 @@ public class BlockSpawner : MonoBehaviour
         {
 
 
-            newPattern = Random.Range(0, 3);
+            newPattern = Random.Range(0, 6);
 
 
             switch (newPattern)
