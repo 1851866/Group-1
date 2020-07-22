@@ -28,7 +28,7 @@ public class BlockSpawner : MonoBehaviour
         {
 
 
-            newPattern = Random.Range(0, 5);
+            newPattern = Random.Range(0, 3);
 
 
             switch (newPattern)
@@ -42,11 +42,11 @@ public class BlockSpawner : MonoBehaviour
                     oldPattern = 1;
                     break;
                 case 2:
-                    spawnHalves();
+                    spawnZigZag();
                     oldPattern = 2;
                     break;
                 case 3:
-                    spawnZigZag();
+                    spawnHalves();
                     oldPattern = 3;
                     break;
                 case 4:
