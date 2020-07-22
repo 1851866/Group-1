@@ -14,7 +14,7 @@ public class MoveForward : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        speed = 4 + PlayerMovement.score/5;
+        speed = 4 + (PlayerMovement.score/20);
         transform.Translate(0, 0, -1f * speed * Time.deltaTime);
     }
 }

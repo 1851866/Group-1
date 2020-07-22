@@ -35,7 +35,7 @@ public class Changer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        element = 1;
     }
 
     // Update is called once per frame
@@ -47,14 +47,18 @@ public class Changer : MonoBehaviour
 
     private void elementChange()
     {
+
+
+
+
         int newElement;
 
-        //do
-        //{
-        //    newElement = 
-        //} while (newElement==element);
+        do
+        {
+            newElement = Random.Range(1, 5);
+        } while (newElement==element);
 
-        element = Random.Range(1, 5);
+        element = newElement;
 
     }
 }
