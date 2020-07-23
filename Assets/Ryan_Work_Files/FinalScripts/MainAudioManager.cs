@@ -4,54 +4,41 @@ using UnityEngine;
 
 public class MainAudioManager : MonoBehaviour
 {
-    public AudioSource audioSource;
-    public AudioClip[] music;
 
     public AudioSource waterSound, fireSound, windSound, earthSound, swerveSound;
 
-   
-    void Start()
-    {
-        if (!audioSource.playOnAwake)
-        {
-            audioSource.clip = music[Random.Range(0, music.Length)];
-            audioSource.Play();
-        }
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (!audioSource.isPlaying)
-        {
-            audioSource.clip = music[Random.Range(0, music.Length)];
-            audioSource.Play();
-        }
-    }
-
-    void FireSound()
+    //reference when going through obstacles
+    public void FireSound()
     {
         fireSound.Play();
     }
-    void WaterSound()
+    //reference when going through obstacles
+    public void WaterSound()
     {
         waterSound.Play();
 
     }
-    void EarthSound()
+    //reference when going through obstacles
+    public void EarthSound()
     {
         earthSound.Play();
 
     }
-    void WinidSound()
+
+    //reference when going through obstacles
+    public void WindSound()
     {
         windSound.Play();
 
     }
-
-    void SwerveLane()
+    
+    //This is already referenced in the car sound script so don't worry about this
+    public void SwerveLane()
     {
         swerveSound.Play();
     }
+
+   
 
 }

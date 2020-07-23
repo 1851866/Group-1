@@ -17,17 +17,20 @@ public class CarSounds : MonoBehaviour
     public float pitchDropLane;
     private float keySwitchRate;
 
+    private MainAudioManager audioManage;
     
-    public Pause pauseScript;
+    //public Pause pauseScript;
 
     void Start()
     {
         engineSound.pitch = startingPitch;
+        audioManage = GameObject.FindGameObjectWithTag("SoundController").GetComponent<MainAudioManager>();
     }
 
     void Update()
     {
-        if (!pauseScript.isPaused)
+        //change the is paused function to nadias script
+        if (!Pause.isPaused)
         {
             if (!engineSound.isPlaying)
             {
@@ -68,6 +71,8 @@ public class CarSounds : MonoBehaviour
 
     private void LaneSwitch()
     {
+        audioManage.SwerveLane();
+
         if (engineSound.pitch >= 0.4f)
         {
             engineSound.pitch -= pitchDropLane;

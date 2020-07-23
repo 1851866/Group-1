@@ -9,6 +9,7 @@ TagManager:
   - fire
   - wind
   - end
+  - SoundController
   layers:
   - Default
   - TransparentFX
