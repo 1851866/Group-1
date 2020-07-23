@@ -6,6 +6,7 @@ public class EnemyMovement : MonoBehaviour
 {
     private float speed;
     private Collider enemyCollider;
+    public static bool dead = false;
 
 
 
@@ -20,6 +21,8 @@ public class EnemyMovement : MonoBehaviour
 
             if (collision.gameObject.name=="Player")
             {
+                dead = true;
+                PlayerMovement.canChange = false;
                 Time.timeScale = 0;
             }
             
@@ -33,7 +36,7 @@ public class EnemyMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        dead = false;
         enemyCollider = GetComponent<Collider>();
     }
 

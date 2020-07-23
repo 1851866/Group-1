@@ -1,15 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
+using TMPro;
 public class HighScore : MonoBehaviour
 {
    
     public int CurrentScore_;
     public int HighScore_;
 
+
     private bool IsCounting = false;
     private float CurrentScoreF;
+
+    [SerializeField]
+    TextMeshProUGUI currScore;
+
+    [SerializeField]
+    TextMeshProUGUI highScore;
+
+
     public void Start_S()
     {   
         
@@ -45,6 +55,9 @@ public class HighScore : MonoBehaviour
         {
             CountScore();
         }
+
+        currScore.text = "Score - " + CurrentScore_.ToString();
+        highScore.text = "High - " + HighScore_.ToString();
     }
     void CountScore()
     {

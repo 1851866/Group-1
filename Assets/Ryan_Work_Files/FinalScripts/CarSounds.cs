@@ -17,20 +17,22 @@ public class CarSounds : MonoBehaviour
     public float pitchDropLane;
     private float keySwitchRate;
 
-    private MainAudioManager audioManage;
+    public AudioSource swerveSound;
+
+  
     
     //public Pause pauseScript;
 
     void Start()
     {
         engineSound.pitch = startingPitch;
-        audioManage = GameObject.FindGameObjectWithTag("SoundController").GetComponent<MainAudioManager>();
+       
     }
 
     void Update()
     {
         //change the is paused function to nadias script
-        if (!Pause.isPaused)
+        if (!Pause.isPaused && PlayerMovement.canChange)
         {
             if (!engineSound.isPlaying)
             {
@@ -58,8 +60,9 @@ public class CarSounds : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
         {
-            LaneSwitch();
-            
+            if (PlayerMovement.canChange) {
+                LaneSwitch();
+            }
         }
     }
 
@@ -71,12 +74,18 @@ public class CarSounds : MonoBehaviour
 
     private void LaneSwitch()
     {
-        audioManage.SwerveLane();
+      SwerveLane();
 
         if (engineSound.pitch >= 0.4f)
         {
             engineSound.pitch -= pitchDropLane;
         }
     }
+
+    public void SwerveLane()
+    {
+        swerveSound.Play();
+    }
+
 
 }

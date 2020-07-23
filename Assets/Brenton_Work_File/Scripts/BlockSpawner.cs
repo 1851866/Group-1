@@ -18,10 +18,21 @@ public class BlockSpawner : MonoBehaviour
     private float newPattern = 0;
     private float oldPattern = 0;
 
+    public GameObject loseMenu;
+
+    public HighScore hscore;
+
+
 
     void Update()
     {
-        
+        if (EnemyMovement.dead)
+        {
+            hscore.Stop_S();
+            loseMenu.SetActive(true);
+        }
+
+
         timeBetweenWaves = 10- (PlayerMovement.score / 20);
 
         if (Time.time>=timeToSpawn)
@@ -360,4 +371,6 @@ public class BlockSpawner : MonoBehaviour
         int randomIndex = Random.Range(0, 5);
         Instantiate(elements[randomElementIndex], spawnPoints[randomIndex].position, Quaternion.identity);
     }
+
+
 }

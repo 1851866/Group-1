@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
 
     public bool canMove = true;
-    public bool canChange = true;
+    public static bool canChange = true;
     private float nowTime = 0.0f;
     public static int score = 0;
     public static int currentElement;
@@ -26,11 +26,28 @@ public class PlayerMovement : MonoBehaviour
     public GameObject windLane;
 
     private GameObject currentLane;
+
+    public AudioSource waterSound, fireSound, windSound, earthSound;
+
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "water" || other.gameObject.tag == "fire" || other.gameObject.tag == "earth" || other.gameObject.tag == "wind")
         {
             canChange = false;
+        }
+
+        switch (other.gameObject.tag)
+        {
+
+            case "fire":    fireSound.Play();
+                break;
+            case "water": waterSound.Play();
+                break;
+            case "wind": windSound.Play();
+                break;
+            case "earth": earthSound.Play();
+                break;
         }
 
 
@@ -46,7 +63,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-
+        Time.timeScale = 1;
+        canChange = false;
         checkColour();
     }
 

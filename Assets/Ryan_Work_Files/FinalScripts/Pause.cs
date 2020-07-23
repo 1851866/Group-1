@@ -14,7 +14,7 @@ public class Pause : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -33,8 +33,9 @@ public class Pause : MonoBehaviour
         }
     }
 
-    void ResumeGame()
+    public void ResumeGame()
     {
+
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -42,6 +43,7 @@ public class Pause : MonoBehaviour
 
     void PauseGame()
     {
+        
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;

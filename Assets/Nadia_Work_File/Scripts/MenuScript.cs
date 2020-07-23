@@ -5,17 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class MenuScript : MonoBehaviour
 {
+
+    public GameObject loseMenu;
+    public GameObject mainMenu;
+    public GameObject gameMan;
+    public GameObject scoreDisp;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        loseMenu.SetActive(false);
     }
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("AttemptTwo");
+        scoreDisp.SetActive(true);
+        mainMenu.SetActive(false);
+        gameMan.SetActive(true);
+        PlayerMovement.canChange=true;
     }
 
+    public void RetryGame()
+    {
+        loseMenu.SetActive(false);
+        SceneManager.LoadScene(0);
+    }
 
     public void QuitGame()
     {
@@ -31,9 +45,9 @@ public class MenuScript : MonoBehaviour
 
     }
 
-    public void HowTo()
+    public void Credits()
     {
-        SceneManager.LoadScene("How To");
+        SceneManager.LoadScene(1);
     }
     // Update is called once per frame
     void Update()

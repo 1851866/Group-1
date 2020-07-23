@@ -6,9 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Hans_Work_File/Hans_Work_Scene.unity
-    guid: cb30c294ae8c01248b5bac51fee8a9a0
+    path: Assets/Brenton_Work_File/New Scene.unity
+    guid: 75046bb8d749eb446af1d411be31875c
   - enabled: 1
-    path: Assets/Ryan_Work_Files/Test2.unity
-    guid: 1959ebfec6b928446b8fad10d41c608c
+    path: Assets/Nadia_Work_File/Scenes/CreditsScene.unity
+    guid: c89cc8f6e99fc524bb279c5d3a5c299d
   m_configObjects: {}
