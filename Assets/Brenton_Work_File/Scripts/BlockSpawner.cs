@@ -28,7 +28,7 @@ public class BlockSpawner : MonoBehaviour
         {
 
 
-            newPattern = Random.Range(0, 6);
+            newPattern = Random.Range(0, 5);//0,6
 
 
             switch (newPattern)
@@ -50,15 +50,14 @@ public class BlockSpawner : MonoBehaviour
                     oldPattern = 3;
                     break;
                 case 4:
-                    spawnChaos();
+                    spawnMovers();
                     oldPattern = 4;
-                    break;
-                case 5:
-                    spawnChaosWithChanger();
-                    oldPattern = 5;
                     break;
 
             }
+
+
+
 
 
             //spawnHalves();
@@ -302,6 +301,33 @@ public class BlockSpawner : MonoBehaviour
         spawnChanger();
     }
 
+    void spawnMovers()
+    {
+      
+        int randomElementIndex;
+
+        for (int i = 0; i < 40; i = i + 4)
+        {
+
+           randomElementIndex = Random.Range(5, 8);
+
+            switch (randomElementIndex)
+            {
+                case 5:
+                    Instantiate(elements[randomElementIndex], new Vector3(spawnPoints[2].position.x, spawnPoints[2].position.y, spawnPoints[2].position.z + i), Quaternion.identity);
+                    break;
+                case 6:
+                    Instantiate(elements[randomElementIndex], new Vector3(spawnPoints[0].position.x, spawnPoints[0].position.y, spawnPoints[0].position.z + i), Quaternion.identity);
+                    break;
+                case 7:
+                    Instantiate(elements[randomElementIndex], new Vector3(spawnPoints[4].position.x, spawnPoints[4].position.y, spawnPoints[4].position.z + i), Quaternion.identity);
+                    break;
+                    
+            }
+
+            
+        }
+    }
 
 
 

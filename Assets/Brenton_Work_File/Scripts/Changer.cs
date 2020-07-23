@@ -5,26 +5,47 @@ using UnityEngine;
 public class Changer : MonoBehaviour
 {
 
-    int element; //Water =1 , Fire = 2, Earth = 3, Wind = 4
+    int element; //Water =0 , Fire = 1, Earth = 2, Wind = 3
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.name=="Player")
         {
 
-            elementChange();
-            
+
+            int currentE = PlayerMovement.currentElement;
+            int newElement = Random.Range(0, 4); ;
 
 
-            switch (element)
+            bool same=true;
+
+
+            while (same==true)
             {
-                case 1: other.tag = "water";
+
+                if (newElement == currentE)
+                {
+                    same = true;
+                    newElement = Random.Range(0, 4);
+                }
+                else
+                {
+                    same = false;
+                }
+
+                
+            }
+
+
+            switch (newElement)
+            {
+                case 0: other.tag = "water";
                     break;
-                case 2: other.tag = "fire";
+                case 1: other.tag = "fire";
                     break;
-                case 3: other.tag = "earth";
+                case 2: other.tag = "earth";
                     break;
-                case 4: other.tag = "wind";
+                case 3: other.tag = "wind";
                     break;
             }
         }
@@ -35,7 +56,7 @@ public class Changer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        element = 1;
+        element = 2;
     }
 
     // Update is called once per frame

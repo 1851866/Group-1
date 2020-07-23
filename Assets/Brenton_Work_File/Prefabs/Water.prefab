@@ -158,6 +158,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barrier_Blue
       objectReference: {fileID: 0}
+    - target: {fileID: 4790650913400037098, guid: 059f4606a7e8ce946a0a8900928857a0,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a77289fb70ffebb4da1bf9aa0ab4d24b, type: 2}
     - target: {fileID: 8232036894774473706, guid: 059f4606a7e8ce946a0a8900928857a0,
         type: 3}
       propertyPath: m_LocalPosition.x

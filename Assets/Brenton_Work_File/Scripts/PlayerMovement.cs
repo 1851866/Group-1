@@ -20,6 +20,12 @@ public class PlayerMovement : MonoBehaviour
     public GameObject earth;
     public GameObject wind;
 
+    public GameObject fireLane;
+    public GameObject waterLane;
+    public GameObject earthLane;
+    public GameObject windLane;
+
+    private GameObject currentLane;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "water" || other.gameObject.tag == "fire" || other.gameObject.tag == "earth" || other.gameObject.tag == "wind")
@@ -40,8 +46,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-    
 
+        checkColour();
     }
 
     // Update is called once per frame
@@ -56,13 +62,16 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftArrow)&&pos.x>=-1 &&canMove && canChange)
         {
-       
+
+
             target =  new Vector3(pos.x - 1, 1, pos.z);
             canMove = false;
 
         }
         if (Input.GetKeyDown(KeyCode.RightArrow) && pos.x <=1 && canMove && canChange)
         {
+
+
             target = new Vector3(pos.x + 1, 1, pos.z);
             canMove = false;
         }
@@ -81,11 +90,15 @@ public class PlayerMovement : MonoBehaviour
             canMove = true;
         }
 
+        Destroy(currentLane);
+        checkColour();
+
 
 
         switch (gameObject.tag)
         {
             case "water":
+
                 currentElement = 0;
                 water.SetActive(true);
                 fire.SetActive(false);
@@ -93,6 +106,7 @@ public class PlayerMovement : MonoBehaviour
                 wind.SetActive(false);
                 break;
             case "fire":
+
                 currentElement = 1;
                 water.SetActive(false);
                 fire.SetActive(true);
@@ -100,6 +114,7 @@ public class PlayerMovement : MonoBehaviour
                 wind.SetActive(false);
                 break;
             case "earth":
+
                 currentElement = 2;
                 water.SetActive(false);
                 fire.SetActive(false);
@@ -107,6 +122,7 @@ public class PlayerMovement : MonoBehaviour
                 wind.SetActive(false);
                 break;
             case "wind":
+
                 currentElement = 3;
                 water.SetActive(false);
                 fire.SetActive(false);
@@ -115,6 +131,27 @@ public class PlayerMovement : MonoBehaviour
                 break;
         }
 
+        
+
+    }
+
+    void checkColour()
+    {
+        switch (gameObject.tag)
+        {
+            case "water":
+                currentLane = Instantiate(waterLane, new Vector3(transform.position.x, 0.5f, 0), Quaternion.identity);
+                break;
+            case "fire":
+                currentLane = Instantiate(fireLane, new Vector3(transform.position.x, 0.5f, 0), Quaternion.identity);
+                break;
+            case "earth":
+                currentLane = Instantiate(earthLane, new Vector3(transform.position.x, 0.5f, 0), Quaternion.identity);
+                break;
+            case "wind":
+                currentLane = Instantiate(windLane, new Vector3(transform.position.x, 0.5f, 0), Quaternion.identity);
+                break;
+        }
     }
 
 
