@@ -850,6 +850,36 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 1436938724642527681, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938724642527681, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938724642527681, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938724642527681, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1104235380}
+    - target: {fileID: 1436938724642527681, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938724642527681, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1436938724642527686, guid: ec9a57e7a76f870428932d4eacc77621,
         type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -924,6 +954,36 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SizeDelta.x
       value: 157.03561
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938725292582821, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938725292582821, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938725292582821, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938725292582821, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1104235380}
+    - target: {fileID: 1436938725292582821, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: QuitGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436938725292582821, guid: ec9a57e7a76f870428932d4eacc77621,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1436938725292582842, guid: ec9a57e7a76f870428932d4eacc77621,
         type: 3}
