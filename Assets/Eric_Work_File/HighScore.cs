@@ -53,6 +53,11 @@ public class HighScore : MonoBehaviour
     void Update()
     {
 
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            ResetHighScore();
+        }
+
         if (IsCounting== true)
         {
             CountScore();

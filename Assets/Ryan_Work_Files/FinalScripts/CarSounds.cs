@@ -58,7 +58,7 @@ public class CarSounds : MonoBehaviour
             engineSound.Stop();
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow))
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)|| Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D))
         {
             if (PlayerMovement.canChange) {
                 LaneSwitch();

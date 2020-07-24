@@ -78,7 +78,7 @@ public class PlayerMovement : MonoBehaviour
     
         pos = gameObject.transform.position;
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow)&&pos.x>=-1 &&canMove && canChange)
+        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A) )&& pos.x>=-1 &&canMove && canChange)
         {
 
 
@@ -86,7 +86,7 @@ public class PlayerMovement : MonoBehaviour
             canMove = false;
 
         }
-        if (Input.GetKeyDown(KeyCode.RightArrow) && pos.x <=1 && canMove && canChange)
+        if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && pos.x <=1 && canMove && canChange)
         {
 
 
