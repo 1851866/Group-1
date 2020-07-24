@@ -21,7 +21,7 @@ public class HighScore : MonoBehaviour
 
 
     public void Start_S()
-    {   
+    {
         
         IsCounting = true;
     }
@@ -30,11 +30,13 @@ public class HighScore : MonoBehaviour
     {
         IsCounting = false;
         CurrentScoreF = 0;
+        
     }
 
     public void Pause_S()
     {
         IsCounting = false;
+        
     }
 
     public void ResetHighScore()

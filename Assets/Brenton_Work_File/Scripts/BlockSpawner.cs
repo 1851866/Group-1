@@ -30,8 +30,12 @@ public class BlockSpawner : MonoBehaviour
         {
             hscore.Stop_S();
             loseMenu.SetActive(true);
+            
         }
-
+        if (EnemyMovement.dead == false)
+        {
+            hscore.Start_S();
+        }
 
         timeBetweenWaves = 10- (PlayerMovement.score / 20);
 
