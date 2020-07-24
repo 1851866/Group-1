@@ -32,7 +32,7 @@ public class CarSounds : MonoBehaviour
     void Update()
     {
         //change the is paused function to nadias script
-        if (!Pause.isPaused && PlayerMovement.canChange)
+        if (!Pause.isPaused) //&& PlayerMovement.canChange)
         {
             if (!engineSound.isPlaying)
             {
